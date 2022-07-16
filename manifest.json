@@ -1,11 +1,12 @@
 {
   "vendor": "bitsized",
-  "name": "testejean",
-  "version": "1.0.0",
+  "name": "bitsized-g4-backend-api",
+  "version": "0.2.0",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
     "sitemap": "0.x",
+    "node": "6.x",
     "docs": "0.x"
   },
   "mustUpdateAt": "2018-09-05",
