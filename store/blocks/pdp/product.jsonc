@@ -1,6 +1,7 @@
 {
   "store.product": {
     "children": [
+      
       "flex-layout.row#product-breadcrumb",
       "condition-layout.product#availability",
       "flex-layout.row#description",
@@ -59,6 +60,7 @@
       "blockClass": "product"
     },
     "children": [
+      
       "flex-layout.row#product-image",
       "product-bookmark",
       "product-specification-badges"
@@ -100,6 +102,7 @@
     },
     "children": [
       "flex-layout.row#product-name",
+      "point",
       "product-rating-summary",
       "flex-layout.row#list-price-savings",
       "flex-layout.row#selling-price",
