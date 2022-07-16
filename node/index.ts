@@ -1,12 +1,19 @@
-import type { ClientsConfig, ServiceContext, RecorderState } from '@vtex/api'
+import type { ClientsConfig, ServiceContext, RecorderState, ParamsContext } from '@vtex/api'
 import { LRUCache, method, Service } from '@vtex/api'
+
+import { receivedOrder } from './events/received-order'
+import { setCacheContext } from './utils/cachedContext'
 
 import { Clients } from './clients'
 import { status } from './middlewares/status'
 import { validate } from './middlewares/validate'
-import { teste } from './middlewares/teste'
+import { getPoints } from './middlewares/getPoints'
+import { debitPoints } from './middlewares/debitPoints'
 
 const TIMEOUT_MS = 800
+
+const THREE_SECONDS_MS = 3 * 1000
+const CONCURRENCY = 10
 
 // Create a LRU memory cache for the Status client.
 // The @vtex/api HttpClient respects Cache-Control headers and uses the provided cache.
@@ -28,6 +35,14 @@ const clients: ClientsConfig<Clients> = {
     status: {
       memoryCache,
     },
+    events: {
+      exponentialTimeoutCoefficient: 2,
+      exponentialBackoffCoefficient: 2,
+      initialBackoffDelay: 50,
+      retries: 1,
+      timeout: THREE_SECONDS_MS,
+      concurrency: CONCURRENCY,
+    },
   },
 }
 
@@ -42,15 +57,26 @@ declare global {
 }
 
 // Export a service that defines route handlers and client options.
-export default new Service({
+export default new Service<Clients, State, ParamsContext>({
   clients,
+  events: {
+    receivedOrder: receivedOrder,
+  },
   routes: {
-    // `status` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
+    hcheck: (ctx: any) => {
+      setCacheContext(ctx),
+      ctx.set('Cache-Control', 'no-cache')
+      ctx.status = 200
+      ctx.body = 'ok'
+    },
     status: method({
       GET: [validate, status],
     }),
-    teste: method({
-      GET: [teste]
+    getPoints: method({
+      GET: [getPoints]
+    }),
+    debitPoints: method({
+      PUT: [debitPoints]
     })
   },
 })
