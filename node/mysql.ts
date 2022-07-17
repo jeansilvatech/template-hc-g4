@@ -5,8 +5,8 @@ const connect = () => {
   var config = {
     host: 'musculacao-db.cetjcgngktwh.sa-east-1.rds.amazonaws.com',
     user: 'bitsized-g4',
-    password: 'bitsizedg4*',
-    database: 'bitsizedg4',
+    password: 'bitsized-g4*',
+    database: 'bitsized-g4',
     port: 3306,
   };
 
