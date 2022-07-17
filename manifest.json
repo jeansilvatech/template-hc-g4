@@ -64,6 +64,7 @@
     "vtex.tab-layout": "0.x",
     "vtex.condition-layout": "2.x",
     "vtex.css-handles": "1.x",
+    "vtex.product-context": "0.x",
     "bitsized.point-count-four": "1.x"
   },
   "peerDependencies": {
