@@ -17,10 +17,10 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/apparel---accessories/",
+        "href": "/eletronicos/",
         "noFollow": false,
-        "tagTitle": "Apparel & Accessories",
-        "text": "Apparel & Accessories"
+        "tagTitle": "Categoria",
+        "text": "Eletrônicos"
       }
     },
     "blocks": [
@@ -41,8 +41,8 @@
     },
     "children": [
       "menu-item#category-apparel-clothing",
-      "menu-item#category-apparel-accessories",
-      "menu-item#category-apparel-eyeglasses"
+      "menu-item#category-apparel-accessories"
+      
     ]
   },
   "menu-item#category-apparel-clothing": {
@@ -53,10 +53,10 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/apparel---accessories/clothing/",
+        "href": "/eletronicos/smartphone",
         "noFollow": false,
-        "tagTitle": "Clothing",
-        "text": "Clothing"
+        "tagTitle": "Categoria",
+        "text": "Smartphone"
       }
     }
   },
@@ -68,25 +68,10 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/apparel---accessories/accessories/",
+        "href": "/eletronicos/informatica",
         "noFollow": false,
-        "tagTitle": "Accessories",
-        "text": "Accessories"
-      }
-    }
-  },
-  "menu-item#category-apparel-eyeglasses": {
-    "props": {
-      "id": "menu-item-category-apparel-eyeglasses",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "/apparel---accessories/eyeglasses/",
-        "noFollow": false,
-        "tagTitle": "Eyeglasses",
-        "text": "Eyeglasses"
+        "tagTitle": "Informática",
+        "text": "Informática"
       }
     }
   },
@@ -116,7 +101,7 @@
         "href": "#",
         "noFollow": true,
         "tagTitle": "More",
-        "text": "More"
+        "text": "Mais"
       }
     },
     "blocks": [
@@ -166,8 +151,8 @@
         "type": "internal",
         "href": "/about-us",
         "noFollow": true,
-        "tagTitle": "About us",
-        "text": "About us"
+        "tagTitle": "Sobre",
+        "text": "Sobre"
       }
     }
   },
