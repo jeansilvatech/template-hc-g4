@@ -9,8 +9,8 @@ export async function OrderStatusUpdated(
 
   const orderId = ctx.body.orderId
 
+  const order: any = await clients.order.getOrder(orderId)
   if (ctx.body.currentState == approved) {
-    const order: any = await clients.order.getOrder(orderId)
     const price = order.value
     const points = Math.floor(price / 100)
 
