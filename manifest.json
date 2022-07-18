@@ -78,6 +78,13 @@
         "host": "api.vtex.com",
         "path": "/dataentities/*"
       }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "bitsized.vtexcommercestable.com.br",
+        "path": "/*"
+      }
     }
   ],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
