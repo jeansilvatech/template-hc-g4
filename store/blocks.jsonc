@@ -13,7 +13,7 @@
   },
 
   "store.account": {
-    "blocks": ["my-account"],
+    "blocks": ["point.user","my-account"],
     "parent": {
       "challenge": "challenge.profile"
     }
