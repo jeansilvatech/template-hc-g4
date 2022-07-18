@@ -1,25 +1,17 @@
-import type { ClientsConfig, ServiceContext, RecorderState, ParamsContext } from '@vtex/api'
-import { LRUCache, method, Service } from '@vtex/api'
-
-import { receivedOrder } from './events/received-order'
-import { setCacheContext } from './utils/cachedContext'
+import type { ClientsConfig, ServiceContext, EventContext } from '@vtex/api'
+import { method, Service } from '@vtex/api'
 
 import { Clients } from './clients'
-import { status } from './middlewares/status'
-import { validate } from './middlewares/validate'
-import { getPoints } from './middlewares/getPoints'
-import { debitPoints } from './middlewares/debitPoints'
+
+import { getPoints } from './routes/getPoints'
+import { debitPoints } from './routes/debitPoints'
+
+import { OrderStatusUpdated } from './events/OrderStatusUpdated'
 
 const TIMEOUT_MS = 800
 
 const THREE_SECONDS_MS = 3 * 1000
 const CONCURRENCY = 10
-
-// Create a LRU memory cache for the Status client.
-// The @vtex/api HttpClient respects Cache-Control headers and uses the provided cache.
-const memoryCache = new LRUCache<string, any>({ max: 5000 })
-
-metrics.trackCache('status', memoryCache)
 
 // This is the configuration for clients available in `ctx.clients`.
 const clients: ClientsConfig<Clients> = {
@@ -32,9 +24,6 @@ const clients: ClientsConfig<Clients> = {
       timeout: TIMEOUT_MS,
     },
     // This key will be merged with the default options and add this cache to our Status client.
-    status: {
-      memoryCache,
-    },
     events: {
       exponentialTimeoutCoefficient: 2,
       exponentialBackoffCoefficient: 2,
@@ -48,30 +37,30 @@ const clients: ClientsConfig<Clients> = {
 
 declare global {
   // We declare a global Context type just to avoid re-writing ServiceContext<Clients, State> in every handler and resolver
-  type Context = ServiceContext<Clients, State>
-
-  // The shape of our State object found in `ctx.state`. This is used as state bag to communicate between middlewares.
-  interface State extends RecorderState {
-    code: number
+  type Context = ServiceContext<Clients>
+  interface StatusChangeContext extends EventContext<Clients> {
+    body: {
+      domain: string
+      orderId: string
+      currentState: string
+      lastState: string
+      currentChangeDate: string
+      lastChangeDate: string
+    }
   }
 }
 
 // Export a service that defines route handlers and client options.
-export default new Service<Clients, State, ParamsContext>({
+export default new Service({
   clients,
   events: {
-    receivedOrder: receivedOrder,
+    OrderStatusUpdated,
   },
   routes: {
     hcheck: (ctx: any) => {
-      setCacheContext(ctx),
-      ctx.set('Cache-Control', 'no-cache')
       ctx.status = 200
       ctx.body = 'ok'
     },
-    status: method({
-      GET: [validate, status],
-    }),
     getPoints: method({
       GET: [getPoints]
     }),
