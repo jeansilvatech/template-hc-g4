@@ -50,8 +50,8 @@
         "type": "internal",
         "href": "#",
         "noFollow": false,
-        "tagTitle": "Sale",
-        "text": "Sale"
+        "tagTitle": "Oferta",
+        "text": "Oferta"
       }
     }
   },
@@ -65,8 +65,8 @@
         "type": "internal",
         "href": "#",
         "noFollow": false,
-        "tagTitle": "Personalization",
-        "text": "Personalization"
+        "tagTitle": "Personalização",
+        "text": "Personalização"
       }
     }
   },
@@ -151,8 +151,8 @@
         "type": "internal",
         "href": "/bags/d",
         "noFollow": true,
-        "tagTitle": "Bags",
-        "text": "Bags"
+        "tagTitle": "Mouse Pad",
+        "text": "Mouse Pad"
       }
     }
   },
@@ -167,8 +167,8 @@
         "type": "internal",
         "href": "/bags/backpacks",
         "noFollow": true,
-        "tagTitle": "Backpacks",
-        "text": "Backpacks"
+        "tagTitle": "Monitor",
+        "text": "Monitor"
       }
     }
   },
@@ -183,8 +183,8 @@
         "type": "internal",
         "href": "/bags/necessaire",
         "noFollow": true,
-        "tagTitle": "Necessaire",
-        "text": "Necessaire"
+        "tagTitle": "Caixa de Som",
+        "text": "Caixa de Som"
       }
     }
   },
@@ -224,8 +224,8 @@
         "type": "internal",
         "href": "/clothing/d",
         "noFollow": true,
-        "tagTitle": "Clothing",
-        "text": "Clothing"
+        "tagTitle": "Informática",
+        "text": "Informática"
       }
     },
     "blocks": ["vtex.menu@2.x:submenu.accordion#clothing"]
@@ -250,8 +250,8 @@
   "menu-item#decoration-mobile": {
     "props": {
       "itemProps": {
-        "tagTitle": "Decoration",
-        "text": "Decoration"
+        "tagTitle": "Eletrônicos",
+        "text": "Eletrônicos"
       }
     },
     "blocks": ["vtex.menu@2.x:submenu.accordion#decoration"]
@@ -274,8 +274,8 @@
   "menu-item#sale-mobile": {
     "props": {
       "itemProps": {
-        "tagTitle": "Sale",
-        "text": "Sale"
+        "tagTitle": "Oferta",
+        "text": "Oferta"
       }
     },
     "blocks": ["vtex.menu@2.x:submenu.accordion#sale"]
@@ -305,8 +305,8 @@
         "type": "internal",
         "href": "/clothing/d",
         "noFollow": true,
-        "tagTitle": "Clothing",
-        "text": "Clothing"
+        "tagTitle": "Headset Gamer",
+        "text": "Headset Gamer"
       }
     }
   },
@@ -321,8 +321,8 @@
         "type": "internal",
         "href": "/clothing/shorts",
         "noFollow": false,
-        "tagTitle": "Shorts",
-        "text": "Shorts"
+        "tagTitle": "Gabinete Gamer",
+        "text": "Gabinete Gamer"
       }
     }
   },
@@ -337,8 +337,8 @@
         "type": "internal",
         "href": "/clothing/tank-tops",
         "noFollow": false,
-        "tagTitle": "Tank tops",
-        "text": "Tank tops"
+        "tagTitle": "Notebook Gamer",
+        "text": "Notebook Gamer"
       }
     }
   },
@@ -353,8 +353,8 @@
         "type": "internal",
         "href": "/clothing/shirts",
         "noFollow": false,
-        "tagTitle": "Shirts",
-        "text": "Shirts"
+        "tagTitle": "Cadeira Gamer",
+        "text": "Cadeira Gamer"
       }
     }
   },
@@ -369,8 +369,8 @@
         "type": "internal",
         "href": "/clothing/sweatshirt",
         "noFollow": false,
-        "tagTitle": "Sweatshirt",
-        "text": "Sweatshirt"
+        "tagTitle": "Teclado",
+        "text": "Teclado"
       }
     }
   },
@@ -385,8 +385,8 @@
         "type": "internal",
         "href": "/clothing/cropped",
         "noFollow": false,
-        "tagTitle": "Cropped",
-        "text": "Cropped"
+        "tagTitle": "Mouse",
+        "text": "Mouse"
       }
     }
   }

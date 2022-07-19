@@ -5,6 +5,11 @@
           "autoplay": {
             "timeout": 7000,
             "stopOnHover": true
+          },
+          "itemsPerPage": {
+            "desktop": 5,
+            "tablet": 4,
+            "phone": 3
           }
         }
       },
