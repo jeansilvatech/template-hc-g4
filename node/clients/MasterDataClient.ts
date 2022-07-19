@@ -51,9 +51,6 @@ export default class MasterDataClient extends ExternalClient {
           'X-VTEX-API-AppToken':'GGBTSDSFKHHXYRRCLMKXIRZXZJJBCGWMOBJUFFLNWTIJGXXKOFPHIZDKAKFRNCRCJDCCAODWZLCPVLCMKHRCNTBKLAWUTNFCKPQAMAPNFJDJGSNUXININIFXIQIWURKM'
         }
       })
-      console.log(t)
-    } else {
-      console.log('achou', pointsDto.order_id)
     }
   }
 
@@ -67,9 +64,6 @@ export default class MasterDataClient extends ExternalClient {
           'X-VTEX-API-AppToken':'GGBTSDSFKHHXYRRCLMKXIRZXZJJBCGWMOBJUFFLNWTIJGXXKOFPHIZDKAKFRNCRCJDCCAODWZLCPVLCMKHRCNTBKLAWUTNFCKPQAMAPNFJDJGSNUXININIFXIQIWURKM'
         }
       })
-      console.log(t)
-    } else {
-      console.log('não achou: ', orderId)
     }
   }
 }
