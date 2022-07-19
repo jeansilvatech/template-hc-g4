@@ -61,7 +61,7 @@ export default class MasterDataClient extends ExternalClient {
     const point = await this.getPointItem(orderId)
 
     if (point) {
-      await this.http.put(`/api/dataentities/WL/documents/${point.id}`, { canceled: true }, {
+      await this.http.patch(`/api/dataentities/WL/documents/${point.id}`, { canceled: true }, {
         headers: {
           'X-VTEX-API-AppKey': 'vtexappkey-bitsized-IKTLBO',
           'X-VTEX-API-AppToken':'GGBTSDSFKHHXYRRCLMKXIRZXZJJBCGWMOBJUFFLNWTIJGXXKOFPHIZDKAKFRNCRCJDCCAODWZLCPVLCMKHRCNTBKLAWUTNFCKPQAMAPNFJDJGSNUXININIFXIQIWURKM'
