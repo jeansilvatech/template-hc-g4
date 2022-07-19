@@ -9,16 +9,15 @@ export async function OrderStatusUpdated(
 
   const orderId = ctx.body.orderId
 
-  const order: any = await clients.order.getOrder(orderId)
   if (ctx.body.currentState == approved) {
+    const order: any = await clients.order.getOrder(orderId)
     const price = order.value
     const points = Math.floor(price / 100)
-
-    console.log('Pagamento aprovado: ', orderId, 'R$ ', order.value, points)
+    const userId = ''
+    console.log(ctx.vtex)
+    await clients.masterData.setPoints(orderId, userId, price, points)
   } else if (ctx.body.currentState == canceled) {
-    console.log('Cancelado: ', ctx.body.orderId)
-  } else {
-    console.log('Outros estados: ', ctx.body.lastState, ' - ', orderId)
+    await clients.masterData.cancelPoints(orderId)
   }
 
   await next()
