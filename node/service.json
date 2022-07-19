@@ -17,11 +17,11 @@
       "public": true
     },
     "getPoints": {
-      "path": "/_v/get-points",
+      "path": "/_v/get-points/:user_id",
       "public": true
     },
     "debitPoints": {
-      "path": "/_v/debit-points",
+      "path": "/_v/debit-points/:user_id",
       "public": true
     }
   }

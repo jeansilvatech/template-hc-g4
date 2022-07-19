@@ -1,17 +1,14 @@
-import jwt_decode from 'jwt-decode';
-
 export async function getPoints(ctx: Context, next: () => Promise<any>) {
   const { clients } = ctx
+  const user_id = ctx.vtex.route.params.user_id as string
 
-  const userId = (jwt_decode(ctx.vtex.authToken) as any).userId
-
-  const pointsList = await clients.masterData.getPoints(userId)
+  const points = await clients.masterData.getPoints(user_id)
 
   ctx.status = 200
   ctx.body = {
+    user_id,
     success: true,
-    points: 250,
-    pointsList
+    points
   }
 
   await next()

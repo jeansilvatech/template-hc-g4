@@ -3,7 +3,7 @@ import { ExternalClient } from '@vtex/api'
 
 export default class OrderClient extends ExternalClient {
   constructor(context: IOContext, options?: InstanceOptions) {
-    super('https://bitsized.myvtex.com', context, options)
+    super('https://bitsized.vtexcommercestable.com.br', context, options)
   }
 
   public async getOrder(orderId: string): Promise<string> {

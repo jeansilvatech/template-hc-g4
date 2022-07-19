@@ -1,58 +1,75 @@
 import type { InstanceOptions, IOContext } from '@vtex/api'
 import { ExternalClient } from '@vtex/api'
+import { CreatePointsDto } from '../dtos/CreatePointsDto';
 
 export default class MasterDataClient extends ExternalClient {
   constructor(context: IOContext, options?: InstanceOptions) {
-    super('https://bitsized.myvtex.com', context, options)
+    super('https://bitsized.vtexcommercestable.com.br', context, options)
   }
 
   public async getPoints(userId: string): Promise<number> {
-    const list = await this.http.get(`/api/dataentities/WL/search?_fields=_all&_where=(user_id=${userId}&canceled=false)`, {
+    const result = await this.http.get('/api/dataentities/WL/search?_fields=_all', {
       headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
         'X-VTEX-API-AppKey': 'vtexappkey-bitsized-IKTLBO',
         'X-VTEX-API-AppToken':'GGBTSDSFKHHXYRRCLMKXIRZXZJJBCGWMOBJUFFLNWTIJGXXKOFPHIZDKAKFRNCRCJDCCAODWZLCPVLCMKHRCNTBKLAWUTNFCKPQAMAPNFJDJGSNUXININIFXIQIWURKM'
       }
     })
-    const totalPoints = list.reduce()
+
+    let totalPoints = 0;
+
+    result.forEach((order: { user_id: string; canceled: any; operation: 'add' | 'debit', points: number }) => {
+      if (order.user_id == userId && !order.canceled) {
+        if (order.operation == 'add') {
+          totalPoints += order.points
+        } else if (order.operation == 'debit') {
+          totalPoints -= order.points
+        }
+      }
+    })
+
     return totalPoints
   }
 
-  public async setPoints(orderId: string, userId: string, price: number, points: number): Promise<number> {
-    return this.http.post(`/api/oms/pvt/orders/${orderId}${userId}${price}${points}`, {
-      orderId, userId, price, points
-    }, {
+  public async getPointItem(orderId: string): Promise<any> {
+    const result = await this.http.get('/api/dataentities/WL/search?_fields=_all', {
       headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
         'X-VTEX-API-AppKey': 'vtexappkey-bitsized-IKTLBO',
         'X-VTEX-API-AppToken':'GGBTSDSFKHHXYRRCLMKXIRZXZJJBCGWMOBJUFFLNWTIJGXXKOFPHIZDKAKFRNCRCJDCCAODWZLCPVLCMKHRCNTBKLAWUTNFCKPQAMAPNFJDJGSNUXININIFXIQIWURKM'
       }
     })
+
+    return result.find((order: { order_id: string; }) => order.order_id == orderId)
   }
 
-  public async cancelPoints(orderId: string): Promise<number> {
-    return this.http.put(`/api/dataentities/WL/${orderId}`, { canceled: true }, {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'X-VTEX-API-AppKey': 'vtexappkey-bitsized-IKTLBO',
-        'X-VTEX-API-AppToken':'GGBTSDSFKHHXYRRCLMKXIRZXZJJBCGWMOBJUFFLNWTIJGXXKOFPHIZDKAKFRNCRCJDCCAODWZLCPVLCMKHRCNTBKLAWUTNFCKPQAMAPNFJDJGSNUXININIFXIQIWURKM'
-      }
-    })
+  public async setPoints(pointsDto: CreatePointsDto): Promise<void> {
+    const point = await this.getPointItem(pointsDto.order_id)
+
+    if (!point) {
+      const t = await this.http.post('/api/dataentities/WL/documents', pointsDto, {
+        headers: {
+          'X-VTEX-API-AppKey': 'vtexappkey-bitsized-IKTLBO',
+          'X-VTEX-API-AppToken':'GGBTSDSFKHHXYRRCLMKXIRZXZJJBCGWMOBJUFFLNWTIJGXXKOFPHIZDKAKFRNCRCJDCCAODWZLCPVLCMKHRCNTBKLAWUTNFCKPQAMAPNFJDJGSNUXININIFXIQIWURKM'
+        }
+      })
+      console.log(t)
+    } else {
+      console.log('achou', pointsDto.order_id)
+    }
   }
 
-  public async debitPoints(orderId: string, userId: string, price: number, points: number): Promise<number> {
-    return this.http.post(`/api/oms/pvt/orders/${orderId}`, {
-      orderId, userId, price, points
-    }, {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'X-VTEX-API-AppKey': 'vtexappkey-bitsized-IKTLBO',
-        'X-VTEX-API-AppToken':'GGBTSDSFKHHXYRRCLMKXIRZXZJJBCGWMOBJUFFLNWTIJGXXKOFPHIZDKAKFRNCRCJDCCAODWZLCPVLCMKHRCNTBKLAWUTNFCKPQAMAPNFJDJGSNUXININIFXIQIWURKM'
-      }
-    })
+  public async cancelPoints(orderId: string): Promise<void> {
+    const point = await this.getPointItem(orderId)
+
+    if (point) {
+      const t = await this.http.put(`/api/dataentities/WL/documents/${orderId}`, { canceled: true }, {
+        headers: {
+          'X-VTEX-API-AppKey': 'vtexappkey-bitsized-IKTLBO',
+          'X-VTEX-API-AppToken':'GGBTSDSFKHHXYRRCLMKXIRZXZJJBCGWMOBJUFFLNWTIJGXXKOFPHIZDKAKFRNCRCJDCCAODWZLCPVLCMKHRCNTBKLAWUTNFCKPQAMAPNFJDJGSNUXININIFXIQIWURKM'
+        }
+      })
+      console.log(t)
+    } else {
+      console.log('não achou: ', orderId)
+    }
   }
 }

@@ -7,17 +7,24 @@ export async function OrderStatusUpdated(
   const approved = 'payment-approved'
   const canceled = 'cancel'
 
-  const orderId = ctx.body.orderId
+  const order_id = ctx.body.orderId
 
   if (ctx.body.currentState == approved) {
-    const order: any = await clients.order.getOrder(orderId)
-    const price = order.value
-    const points = Math.floor(price / 100)
-    const userId = ''
-    console.log(ctx.vtex)
-    await clients.masterData.setPoints(orderId, userId, price, points)
+    const order: any = await clients.order.getOrder(order_id)
+    const order_value = order.value
+    const points = Math.floor(order_value / 100)
+    const user_id = order.clientProfileData.userProfileId
+    await clients.masterData.setPoints({
+      user_id,
+      order_id,
+      order_value,
+      points,
+      operation: 'add',
+      datetime_operation: new Date(),
+      canceled: false
+    })
   } else if (ctx.body.currentState == canceled) {
-    await clients.masterData.cancelPoints(orderId)
+    await clients.masterData.cancelPoints(order_id)
   }
 
   await next()

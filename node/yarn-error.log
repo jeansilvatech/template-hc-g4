@@ -1,35 +1,34 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Danilo\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add jwt_decode
+  C:\Program Files\nodejs\node.exe C:\Users\Danilo\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add jwt-decode
 
 PATH: 
-  C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-11.0.11\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Amazon\AWSCLIV2\;C:\Users\Danilo\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Danilo\AppData\Local\Programs\Python\Python310\;C:\Users\Danilo\AppData\Local\Microsoft\WindowsApps;C:\Users\Danilo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Danilo\AppData\Roaming\npm;C:\Users\Danilo\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Java\jdk-17\bin;C:\Program Files (x86)\Atmel\Flip 3.4.7\bin
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\Amazon\AWSSAMCLI\bin\;C:\Users\Danilo\AppData\Local\Microsoft\WindowsApps;;C:\Users\Danilo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Danilo\AppData\Roaming\npm;C:\Program Files\vtex\bin
 
 Yarn version: 
   1.22.18
 
 Node version: 
-  14.17.6
+  16.15.1
 
 Platform: 
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/jwt_decode: Not found
-      at Request.params.callback [as _callback] (C:\Users\Danilo\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66138:18)
-      at Request.self.callback (C:\Users\Danilo\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140883:22)
-      at Request.emit (events.js:400:28)
-      at Request.<anonymous> (C:\Users\Danilo\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141855:10)
-      at Request.emit (events.js:400:28)
-      at IncomingMessage.<anonymous> (C:\Users\Danilo\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141777:12)
-      at Object.onceWrapper (events.js:519:28)
-      at IncomingMessage.emit (events.js:412:35)
-      at endReadableNT (internal/streams/readable.js:1317:12)
-      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+  Error: https://registry.yarnpkg.com/jwt-decode: tunneling socket could not be established, cause=connect ETIMEDOUT 10.100.122.185:8080
+      at ClientRequest.onError (C:\Users\Danilo\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:152369:17)
+      at Object.onceWrapper (node:events:642:26)
+      at ClientRequest.emit (node:events:527:28)
+      at Socket.socketErrorListener (node:_http_client:454:9)
+      at Socket.emit (node:events:527:28)
+      at emitErrorNT (node:internal/streams/destroy:157:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
 
 npm manifest: 
   {
     "dependencies": {
       "co-body": "^6.0.0",
+      "jwt-decode": "^3.1.2",
       "ramda": "^0.25.0"
     },
     "devDependencies": {
@@ -1806,11 +1805,6 @@ Lockfile:
     integrity sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=
     dependencies:
       tweetnacl "^0.14.3"
-  
-  bignumber.js@9.0.0:
-    version "9.0.0"
-    resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-9.0.0.tgz#805880f84a329b5eac6e7cb6f8274b6d82bdf075"
-    integrity sha512-t/OYhhJ2SD+YGBQcjY8GzzDHEk9f3nerxjtfa6tlMXfe7frs/WozhvCNoGvpM0P3bNf3Gq5ZRMlGr5f3r4/N8A==
   
   bintrees@1.0.1:
     version "1.0.1"
@@ -3824,6 +3818,11 @@ Lockfile:
       json-schema "0.2.3"
       verror "1.10.0"
   
+  jwt-decode@^3.1.2:
+    version "3.1.2"
+    resolved "https://registry.yarnpkg.com/jwt-decode/-/jwt-decode-3.1.2.tgz#3fb319f3675a2df0c2895c8f5e9fa4b67b04ed59"
+    integrity sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A==
+  
   keygrip@~1.1.0:
     version "1.1.0"
     resolved "https://registry.npmjs.org/keygrip/-/keygrip-1.1.0.tgz#871b1681d5e159c62a445b0c74b615e0917e7226"
@@ -4204,16 +4203,6 @@ Lockfile:
     version "2.1.2"
     resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
     integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
-  
-  mysql@^2.18.1:
-    version "2.18.1"
-    resolved "https://registry.yarnpkg.com/mysql/-/mysql-2.18.1.tgz#2254143855c5a8c73825e4522baf2ea021766717"
-    integrity sha512-Bca+gk2YWmqp2Uf6k5NFEurwY/0td0cpebAucFpY/3jhrwrVGuxU2uQFCHjU19SJfje0yQvi+rVWdq78hR5lig==
-    dependencies:
-      bignumber.js "9.0.0"
-      readable-stream "2.3.7"
-      safe-buffer "5.1.2"
-      sqlstring "2.3.1"
   
   nan@^2.12.1:
     version "2.14.0"
@@ -4837,19 +4826,6 @@ Lockfile:
       normalize-package-data "^2.3.2"
       path-type "^3.0.0"
   
-  readable-stream@2.3.7:
-    version "2.3.7"
-    resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.7.tgz#1eca1cf711aef814c04f62252a36a62f6cb23b57"
-    integrity sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw==
-    dependencies:
-      core-util-is "~1.0.0"
-      inherits "~2.0.3"
-      isarray "~1.0.0"
-      process-nextick-args "~2.0.0"
-      safe-buffer "~5.1.1"
-      string_decoder "~1.1.1"
-      util-deprecate "~1.0.1"
-  
   readable-stream@^2.0.0, readable-stream@^2.0.5, readable-stream@^2.0.6, readable-stream@^2.3.0, readable-stream@^2.3.5:
     version "2.3.6"
     resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.6.tgz#b11c27d88b8ff1fbe070643cf94b0c79ae1b0aaf"
@@ -5289,11 +5265,6 @@ Lockfile:
     integrity sha512-NzNVhJDYpwceVVii8/Hu6DKfD2G+NrQHlS/V/qgv763EYudVwEcMQNxd2lh+0VrUByXN/oJkl5grOhYWvQUYiw==
     dependencies:
       extend-shallow "^3.0.0"
-  
-  sqlstring@2.3.1:
-    version "2.3.1"
-    resolved "https://registry.yarnpkg.com/sqlstring/-/sqlstring-2.3.1.tgz#475393ff9e91479aea62dcaf0ca3d14983a7fb40"
-    integrity sha512-ooAzh/7dxIG5+uDik1z/Rd1vli0+38izZhGzSa34FwR7IbelPWCCKSNIl8jlL/F7ERvy8CB2jNeM1E9i9mXMAQ==
   
   sshpk@^1.7.0:
     version "1.16.1"

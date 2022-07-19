@@ -65,7 +65,7 @@ export default new Service({
       GET: [getPoints]
     }),
     debitPoints: method({
-      PUT: [debitPoints]
+      POST: [debitPoints]
     })
   },
 })
