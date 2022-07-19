@@ -2,12 +2,8 @@ import type { InstanceOptions, IOContext } from '@vtex/api'
 import { ExternalClient } from '@vtex/api'
 
 export default class OrderClient extends ExternalClient {
-  //public token: string | undefined;
-
   constructor(context: IOContext, options?: InstanceOptions) {
-    super('https://bitsized.vtexcommercestable.com.br', context, options)
-    console.log(context.storeUserAuthToken)
-    //this.token = context.adminUserAuthToken
+    super('https://bitsized.myvtex.com', context, options)
   }
 
   public async getOrder(orderId: string): Promise<string> {
@@ -15,7 +11,8 @@ export default class OrderClient extends ExternalClient {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        //'VtexIdclientAutCookie': this.token
+        'X-VTEX-API-AppKey': 'vtexappkey-bitsized-IKTLBO',
+        'X-VTEX-API-AppToken':'GGBTSDSFKHHXYRRCLMKXIRZXZJJBCGWMOBJUFFLNWTIJGXXKOFPHIZDKAKFRNCRCJDCCAODWZLCPVLCMKHRCNTBKLAWUTNFCKPQAMAPNFJDJGSNUXININIFXIQIWURKM'
       }
     })
   }
