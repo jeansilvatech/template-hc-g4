@@ -3,6 +3,9 @@ import { ExternalClient } from '@vtex/api'
 import { CreatePointsDto } from '../dtos/CreatePointsDto';
 
 export default class MasterDataClient extends ExternalClient {
+  appKey = 'vtexappkey-bitsized-IKTLBO'
+  appToken = 'GGBTSDSFKHHXYRRCLMKXIRZXZJJBCGWMOBJUFFLNWTIJGXXKOFPHIZDKAKFRNCRCJDCCAODWZLCPVLCMKHRCNTBKLAWUTNFCKPQAMAPNFJDJGSNUXININIFXIQIWURKM'
+
   constructor(context: IOContext, options?: InstanceOptions) {
     super('https://bitsized.vtexcommercestable.com.br', context, options)
   }
@@ -10,8 +13,8 @@ export default class MasterDataClient extends ExternalClient {
   public async getPoints(userId: string): Promise<number> {
     const result = await this.http.get('/api/dataentities/WL/search?_fields=_all', {
       headers: {
-        'X-VTEX-API-AppKey': 'vtexappkey-bitsized-IKTLBO',
-        'X-VTEX-API-AppToken':'GGBTSDSFKHHXYRRCLMKXIRZXZJJBCGWMOBJUFFLNWTIJGXXKOFPHIZDKAKFRNCRCJDCCAODWZLCPVLCMKHRCNTBKLAWUTNFCKPQAMAPNFJDJGSNUXININIFXIQIWURKM'
+        'X-VTEX-API-AppKey': this.appKey,
+        'X-VTEX-API-AppToken': this.appToken
       }
     })
 
@@ -33,8 +36,8 @@ export default class MasterDataClient extends ExternalClient {
   public async getPointItem(orderId: string): Promise<any> {
     const result = await this.http.get('/api/dataentities/WL/search?_fields=_all', {
       headers: {
-        'X-VTEX-API-AppKey': 'vtexappkey-bitsized-IKTLBO',
-        'X-VTEX-API-AppToken':'GGBTSDSFKHHXYRRCLMKXIRZXZJJBCGWMOBJUFFLNWTIJGXXKOFPHIZDKAKFRNCRCJDCCAODWZLCPVLCMKHRCNTBKLAWUTNFCKPQAMAPNFJDJGSNUXININIFXIQIWURKM'
+        'X-VTEX-API-AppKey': this.appKey,
+        'X-VTEX-API-AppToken': this.appToken
       }
     })
 
@@ -45,10 +48,10 @@ export default class MasterDataClient extends ExternalClient {
     const point = await this.getPointItem(pointsDto.order_id)
 
     if (!point) {
-      const t = await this.http.post('/api/dataentities/WL/documents', pointsDto, {
+      await this.http.post('/api/dataentities/WL/documents', pointsDto, {
         headers: {
-          'X-VTEX-API-AppKey': 'vtexappkey-bitsized-IKTLBO',
-          'X-VTEX-API-AppToken':'GGBTSDSFKHHXYRRCLMKXIRZXZJJBCGWMOBJUFFLNWTIJGXXKOFPHIZDKAKFRNCRCJDCCAODWZLCPVLCMKHRCNTBKLAWUTNFCKPQAMAPNFJDJGSNUXININIFXIQIWURKM'
+          'X-VTEX-API-AppKey': this.appKey,
+          'X-VTEX-API-AppToken': this.appToken
         }
       })
     }
@@ -58,7 +61,7 @@ export default class MasterDataClient extends ExternalClient {
     const point = await this.getPointItem(orderId)
 
     if (point) {
-      const t = await this.http.put(`/api/dataentities/WL/documents/${orderId}`, { canceled: true }, {
+      await this.http.put(`/api/dataentities/WL/documents/${point.id}`, { canceled: true }, {
         headers: {
           'X-VTEX-API-AppKey': 'vtexappkey-bitsized-IKTLBO',
           'X-VTEX-API-AppToken':'GGBTSDSFKHHXYRRCLMKXIRZXZJJBCGWMOBJUFFLNWTIJGXXKOFPHIZDKAKFRNCRCJDCCAODWZLCPVLCMKHRCNTBKLAWUTNFCKPQAMAPNFJDJGSNUXININIFXIQIWURKM'
