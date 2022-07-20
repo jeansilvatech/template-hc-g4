@@ -35,38 +35,47 @@ Maria não está preocupada com o uso dos pontos após a geração, pois ela já
 ## Identificação de Pontos Fortes da Equipe
 No dia seguinte a liberação do desafio, 14 de julho de 2022, a equipe 4 da casa Bitsized se reuniu para discusão dos pontos fortes de seus membros e divisão de subequipes. A Divisão se deu dessa forma:
 
-- **Front-end:**(((Escrever aqui membros do front)))
+- **Front-end:**
+Jean e Filipe
 
 - **Back-end:** (((Escrever aqui membros do back)))
+Danilo, Ericky e Christiany
 
 ## Estudo de ferramentas a serem utilizadas
 
 Após a organização das times de Front-end e back-end, a equipe 4 fez um estudo minucioso do cenário/problema apresentado para levantamento das tecnologias a serem utilizadas. A seguir, listamos as tecnologias utilizadas no desenvolvimento deste trabalho:
 
-- (((Escrever cada tecnologia. Na utilização de API's não esquecer de colocar referência da documentação.)))
--
--
--
--
--
+- VTEX IO
+- NodeJS
+- React
+- API de Pedidos
+- API do Masterdata
  
 
 ## Criação e distribuição de tarefas
 Tendo em mente os times (back-end e front-end) e as tecnologias a serem utilizadas, o próximo passo, naturalmente, foi a distribuição de tarefas. A seguir, exibimos as tarefas de cada time:
 
 - **Back-end**:
-> (((Escrever aqui as tarefas do back. Escrever as tarefas em forma de uma lista numerada por ordem de execução  ou, caso a equipe prefira, utilizar um fluxograma.)))
+> O backend desta aplicação consiste em uma API construída utilizando-se da plataforma VTEX.
+
+A API possui as seguintes rotas:
+
+_v/get-points Recebe nos headers da requisição o token de sessão do usuário que faz compra, e retorna a quantidade de pontos acumulados.
+
+_v/debit-points Recebe nos headers da requisição o token de sessão do usuário que faz que deseja fazer o débito dos pontos. Recebe no corpo da requisição a quantidade de pontos que deseja debitar, e havendo saldo suficiente, faz o débito e retorna o saldo remanescente.
+
+Há também um serviço que ouve os eventos de alteração de status das compras, e sempre que o novo status é "pagamento aprovado" ou "cancelado", a pontuação referente à compra é creditada ou removida do saldo do usuário.
 
 -**Front-end**  
-> (((Escrever aqui as tarefas do front. Escrever as tarefas em forma de uma lista numerada por ordem de execução  ou, caso a equipe prefira, utilizar um fluxograma.)))
+> O frontend desta aplicação consiste uma uma loja virtual, construída utilizando-se da plataforma VTEX.
+
+Além das funcionalidades típicas de uma loja VTEX, foi implementado um sistema de pontos de fidelidade, em que o usuário ganhar 1 ponto a cada real gasto.
+
+O usuário consegue visualizar os pontos ganhos da área "Minha Conta".
 
 ## Dificuldades no desenvolvimento
 Dificuldades podem surgir no desenvolvimento de qualquer projeto, esse não foi diferente. A equipe 4 da casa Bitsized avalia que transpor obstáculos é, sobretudo, uma forma de aprimorar os conhecimentos construídos e descobrir novas soluções. Tendo em vista a importância dos obstáculos no processo de construção do saber, optamos por evidenciar algumas das dificuldades enfrentadas pela equipe e quais soluções foram encontradas, uma vez que este material pode vir a servir de objeto de estudos para  futuros desenvolvedores.
 
-- (Listar aqui problemas, soluções e erros encontradas pela equipe)
--
--
--
 
 ## Apresentação da loja
 ![image](https://user-images.githubusercontent.com/109427932/179981228-10a45bb5-2947-46e4-a023-18289be23449.png)
@@ -89,7 +98,7 @@ A seguir, listamos os membros de nossa equipe, por favor, fique a vontade para v
   <a href="https://github.com/tianygoulart" target="_blank">
     <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
   </a>&nbsp;&nbsp;
-  <a href="#" target="_blank">
+  <a href="https://www.linkedin.com/in/christiany-belini-goulart/" target="_blank">
     <img align="left" src="https://img.shields.io/badge/LinkedIN-423f6d?style=for-the-badge&logo=linkedin&logoColor=753ed2" />
   </a>&nbsp;&nbsp;
 </p>
@@ -98,10 +107,10 @@ A seguir, listamos os membros de nossa equipe, por favor, fique a vontade para v
 - Danilo Antunes
   
 <p align='center'>
-  <a href="#" target="_blank">
+  <a href="https://github.com/antunesdanilo" target="_blank">
     <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
   </a>&nbsp;&nbsp;
-  <a  href="#" target="_blank">
+  <a  href="https://www.linkedin.com/in/danilo-lima-antunes/" target="_blank">
     <img align="left" src="https://img.shields.io/badge/LinkedIN-423f6d?style=for-the-badge&logo=linkedin&logoColor=753ed2" />
   </a>&nbsp;&nbsp;
 </p>
@@ -113,19 +122,19 @@ A seguir, listamos os membros de nossa equipe, por favor, fique a vontade para v
   <a href="https://github.com/erickystn" target="_blank">
     <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
   </a>&nbsp;&nbsp;
-  <a href="#" target="_blank">
+  <a href="https://www.linkedin.com/in/erickystn" target="_blank">
     <img align="left" src="https://img.shields.io/badge/LinkedIN-423f6d?style=for-the-badge&logo=linkedin&logoColor=753ed2" />
   </a>&nbsp;&nbsp;
 </p>
 
   
-- Felipe Carneiro de Almeida
+- Filipe Carneiro de Almeida
   
 <p align='center'>
   <a href="https://github.com/filipecalm" target="_blank">
     <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
   </a>&nbsp;&nbsp;
-  <a href="#" target="_blank">
+  <a href="https://www.linkedin.com/in/filipecalm/" target="_blank">
     <img align="left" src="https://img.shields.io/badge/LinkedIN-423f6d?style=for-the-badge&logo=linkedin&logoColor=753ed2" />
   </a>&nbsp;&nbsp;
 </p>
@@ -138,18 +147,6 @@ A seguir, listamos os membros de nossa equipe, por favor, fique a vontade para v
     <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
   </a>&nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/jeanpesil/" target="_blank">
-    <img align="left" src="https://img.shields.io/badge/LinkedIN-423f6d?style=for-the-badge&logo=linkedin&logoColor=753ed2" />
-  </a>&nbsp;&nbsp;
-</p>
-
-   
-- Pedro Quintino
-  
-<p align='center'>
-  <a href="https://github.com/Pedro-Quintino" target="_blank">
-    <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
-  </a>&nbsp;&nbsp;
-  <a href="#" target="_blank">
     <img align="left" src="https://img.shields.io/badge/LinkedIN-423f6d?style=for-the-badge&logo=linkedin&logoColor=753ed2" />
   </a>&nbsp;&nbsp;
 </p>

@@ -1,7 +1,7 @@
 {
   "vendor": "bitsized",
   "name": "bitsized-g4-backend-api",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
