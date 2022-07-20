@@ -86,7 +86,7 @@ A seguir, listamos os membros de nossa equipe, por favor, fique a vontade para v
 - Christiany Belini Goulart Delfin
 
 <p align='center'>
-  <a href="#" target="_blank">
+  <a href="https://github.com/tianygoulart" target="_blank">
     <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
   </a>&nbsp;&nbsp;
   <a href="#" target="_blank">
@@ -110,7 +110,7 @@ A seguir, listamos os membros de nossa equipe, por favor, fique a vontade para v
 - Ericky Carlos Santana Braga 
   
 <p align='center'>
-  <a href="#" target="_blank">
+  <a href="https://github.com/erickystn" target="_blank">
     <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
   </a>&nbsp;&nbsp;
   <a href="#" target="_blank">
@@ -122,7 +122,7 @@ A seguir, listamos os membros de nossa equipe, por favor, fique a vontade para v
 - Felipe Carneiro de Almeida
   
 <p align='center'>
-  <a href="#" target="_blank">
+  <a href="https://github.com/filipecalm" target="_blank">
     <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
   </a>&nbsp;&nbsp;
   <a href="#" target="_blank">
@@ -146,7 +146,7 @@ A seguir, listamos os membros de nossa equipe, por favor, fique a vontade para v
 - Pedro Quintino
   
 <p align='center'>
-  <a href="#" target="_blank">
+  <a href="https://github.com/Pedro-Quintino" target="_blank">
     <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
   </a>&nbsp;&nbsp;
   <a href="#" target="_blank">
