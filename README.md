@@ -107,13 +107,13 @@ A seguir, listamos os membros de nossa equipe, por favor, fique a vontade para v
 </p>
 
   
-- Ericky Carlos Santana Braga 
+- Erick Carlos Lopes Santana Braga 
   
 <p align='center'>
   <a href="https://github.com/erickystn" target="_blank">
     <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
   </a>&nbsp;&nbsp;
-  <a href="#" target="_blank">
+  <a href="https://www.linkedin.com/in/erickystn" target="_blank">
     <img align="left" src="https://img.shields.io/badge/LinkedIN-423f6d?style=for-the-badge&logo=linkedin&logoColor=753ed2" />
   </a>&nbsp;&nbsp;
 </p>
