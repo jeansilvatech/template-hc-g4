@@ -1,8 +1,11 @@
 import { json } from "co-body"
+import jwt_decode from 'jwt-decode'
 
 export async function debitPoints(ctx: Context, next: () => Promise<any>) {
   const { clients } = ctx
-  const user_id = ctx.vtex.route.params.user_id as string
+
+  const payload: any = jwt_decode(ctx.request.header['x-vtex-credential'])
+  const user_id = payload.userId as string
 
   const body = await json(ctx.req)
   const debitPoints = body.debit

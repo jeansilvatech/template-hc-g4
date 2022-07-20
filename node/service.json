@@ -17,7 +17,7 @@
       "public": true
     },
     "getPoints": {
-      "path": "/_v/get-points/:user_id",
+      "path": "/_v/get-points",
       "public": true
     },
     "debitPoints": {
