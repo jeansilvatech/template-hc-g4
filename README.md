@@ -1,11 +1,17 @@
 # Hiring coders 3 - Desafio fase 3 
 
-- Repositório blocos customizados de pontos
+- Repositório blocos customizados de pontos:
   
+<br />
+
 <p align='center'>
-  <a href="#" target="_blank">
+  <a href="https://github.com/bitsizedg4/bloco-pontos-g4" target="_blank">
     <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
-  </a>&nbsp;&nbsp;
+  </a>
+
+<br />
+<br />
+<br />
 
 Aqui, apresentamos os trabalhos desenvolvidos pela equipe 4 da casa Bitsized. Descrevemos também critérios organizacionais da equipe para serem avaliados no primeiro item dos Critérios de Avaliação da Fase 3, "Organização de Tarefas". 
 
@@ -45,18 +51,18 @@ No dia seguinte a liberação do desafio, 14 de julho de 2022, a equipe 4 da cas
 - **Front-end:**
 Jean e Filipe
 
-- **Back-end:** (((Escrever aqui membros do back)))
+- **Back-end:**
 Danilo, Ericky e Christiany
 
 ## Estudo de ferramentas a serem utilizadas
 
-Após a organização das times de Front-end e back-end, a equipe 4 fez um estudo minucioso do cenário/problema apresentado para levantamento das tecnologias a serem utilizadas. A seguir, listamos as tecnologias utilizadas no desenvolvimento deste trabalho:
+Após a organização dos times de Front-end e back-end, a equipe 4 fez um estudo minucioso do cenário/problema apresentado para levantamento das tecnologias a serem utilizadas. A seguir, listamos as tecnologias utilizadas no desenvolvimento deste trabalho:
 
-- VTEX IO
-- NodeJS
-- React
-- API de Pedidos
-- API do Masterdata
+- [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/welcome)
+- [NodeJS](https://nodejs.org/en/)
+- [React](https://pt-br.reactjs.org/)
+- [API de Pedidos](https://developers.vtex.com/vtex-rest-api/reference/getorder)
+- [API do Masterdata](https://developers.vtex.com/vtex-rest-api/reference/master-data-api-v2-overview)
  
 
 ## Criação e distribuição de tarefas
