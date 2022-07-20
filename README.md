@@ -1,5 +1,12 @@
 # Hiring coders 3 - Desafio fase 3 
 
+- Repositório blocos customizados de pontos
+  
+<p align='center'>
+  <a href="#" target="_blank">
+    <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
+  </a>&nbsp;&nbsp;
+
 Aqui, apresentamos os trabalhos desenvolvidos pela equipe 4 da casa Bitsized. Descrevemos também critérios organizacionais da equipe para serem avaliados no primeiro item dos Critérios de Avaliação da Fase 3, "Organização de Tarefas". 
 
 A seguir, apresentamos um fluxograma contendo as atividades desenvolvidas pela equipe, tais atividades podem ser vistas com detalhes logo mais abaixo.
@@ -70,7 +77,7 @@ Dificuldades podem surgir no desenvolvimento de qualquer projeto, esse não foi 
 
 ## Apresentação da loja
 ![image](https://user-images.githubusercontent.com/109427932/179981228-10a45bb5-2947-46e4-a023-18289be23449.png)
-![image](https://user-images.githubusercontent.com/109427932/179983240-31bd49c5-d229-4a93-9397-7bcd9e82019e.png)
+![image](https://user-images.githubusercontent.com/23384348/180076667-776c27bf-35d9-4e40-ac5b-8133eab33dd1.png)
 ![image](https://user-images.githubusercontent.com/109427932/179981697-04498c73-cc18-4759-be8e-ce78124b323a.png)
 ![image](https://user-images.githubusercontent.com/109427932/179981801-a21f3463-aec7-46dc-b6ed-858bab41e5c4.png)
 
