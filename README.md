@@ -2,6 +2,19 @@
 
 Aqui, apresentamos os trabalhos desenvolvidos pela equipe 4 da casa Bitsized. Descrevemos também critérios organizacionais da equipe para serem avaliados no primeiro item dos Critérios de Avaliação da Fase 3, "Organização de Tarefas". 
 
+A seguir, apresentamos um fluxograma contendo as atividades desenvolvidas pela equipe, tais atividades podem ser vistas com detalhes logo mais abaixo.
+
+```mermaid
+graph 
+A(Apresentação do desafio) --> B(Identificação dos pontos fortes dos membros da equipe);
+B --> D(Estudo de ferrametas a serem utilizadas);
+D --> E(Criação e distribuição de tarefas);
+E --> F(Desenvolvimento);
+F --> G{Testes};
+G --erro encontrado--> F;
+G --Testes concluidos com sucesso--> H((Entrega do Projeto))
+```
+
 ## Índice
 - [Cenário](#Cenário)
 
@@ -22,37 +35,45 @@ Maria não está preocupada com o uso dos pontos após a geração, pois ela já
 ## Identificação de Pontos Fortes da Equipe
 No dia seguinte a liberação do desafio, 14 de julho de 2022, a equipe 4 da casa Bitsized se reuniu para discusão dos pontos fortes de seus membros e divisão de subequipes. A Divisão se deu dessa forma:
 
-- **Front-end:**
+- **Front-end:**(((Escrever aqui membros do front)))
 
-O frontend desta aplicação consiste uma uma loja virtual, construída utilizando-se da plataforma VTEX.
-
-Além das funcionalidades típicas de uma loja VTEX, foi implementado um sistema de pontos de fidelidade, em que o usuário ganhar 1 ponto a cada real gasto.
-
-O usuário consegue visualizar os pontos ganhos da área "Minha Conta".
-
-
-- **Back-end:** 
-
-O backend desta aplicação consiste em uma API construída utilizando-se da plataforma VTEX.
-
-A API possui as seguintes rotas:
-
-_v/get-points
-Recebe nos headers da requisição o token de sessão do usuário que faz compra, e retorna a quantidade de pontos acumulados.
-
-_v/debit-points
-Recebe nos headers da requisição o token de sessão do usuário que faz que deseja fazer o débito dos pontos. Recebe no corpo da requisição a quantidade de pontos que deseja debitar, e havendo saldo suficiente, faz o débito e retorna o saldo remanescente.
-
-Há também um serviço que ouve os eventos de alteração de status das compras, e sempre que o novo status é "pagamento aprovado" ou "cancelado", a pontuação referente à compra é creditada ou removida do saldo do usuário.
-
+- **Back-end:** (((Escrever aqui membros do back)))
 
 ## Estudo de ferramentas a serem utilizadas
 
+Após a organização das times de Front-end e back-end, a equipe 4 fez um estudo minucioso do cenário/problema apresentado para levantamento das tecnologias a serem utilizadas. A seguir, listamos as tecnologias utilizadas no desenvolvimento deste trabalho:
+
+- (((Escrever cada tecnologia. Na utilização de API's não esquecer de colocar referência da documentação.)))
+-
+-
+-
+-
+-
+ 
+
 ## Criação e distribuição de tarefas
+Tendo em mente os times (back-end e front-end) e as tecnologias a serem utilizadas, o próximo passo, naturalmente, foi a distribuição de tarefas. A seguir, exibimos as tarefas de cada time:
+
+- **Back-end**:
+> (((Escrever aqui as tarefas do back. Escrever as tarefas em forma de uma lista numerada por ordem de execução  ou, caso a equipe prefira, utilizar um fluxograma.)))
+
+-**Front-end**  
+> (((Escrever aqui as tarefas do front. Escrever as tarefas em forma de uma lista numerada por ordem de execução  ou, caso a equipe prefira, utilizar um fluxograma.)))
 
 ## Dificuldades no desenvolvimento
+Dificuldades podem surgir no desenvolvimento de qualquer projeto, esse não foi diferente. A equipe 4 da casa Bitsized avalia que transpor obstáculos é, sobretudo, uma forma de aprimorar os conhecimentos construídos e descobrir novas soluções. Tendo em vista a importância dos obstáculos no processo de construção do saber, optamos por evidenciar algumas das dificuldades enfrentadas pela equipe e quais soluções foram encontradas, uma vez que este material pode vir a servir de objeto de estudos para  futuros desenvolvedores.
+
+- (Listar aqui problemas, soluções e erros encontradas pela equipe)
+-
+-
+-
 
 ## Apresentação da loja
+![image](https://user-images.githubusercontent.com/109427932/179981228-10a45bb5-2947-46e4-a023-18289be23449.png)
+![image](https://user-images.githubusercontent.com/109427932/179983240-31bd49c5-d229-4a93-9397-7bcd9e82019e.png)
+![image](https://user-images.githubusercontent.com/109427932/179981697-04498c73-cc18-4759-be8e-ce78124b323a.png)
+![image](https://user-images.githubusercontent.com/109427932/179981801-a21f3463-aec7-46dc-b6ed-858bab41e5c4.png)
+
 
 ## Considerações finais
 
@@ -63,29 +84,30 @@ A seguir, listamos os membros de nossa equipe, por favor, fique a vontade para v
 <h2>Membros:</h2>
 
 - Christiany Belini Goulart Delfin
+
 <p align='center'>
-  <a href="https://github.com/tianygoulart" target="_blank">
+  <a href="#" target="_blank">
     <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
   </a>&nbsp;&nbsp;
-  <a href="https://www.linkedin.com/in/christiany-belini-goulart/" target="_blank">
+  <a href="#" target="_blank">
     <img align="left" src="https://img.shields.io/badge/LinkedIN-423f6d?style=for-the-badge&logo=linkedin&logoColor=753ed2" />
   </a>&nbsp;&nbsp;
 </p>
 
-
+  
 - Danilo Antunes
   
 <p align='center'>
-  <a href="https://github.com/antunesdanilo" target="_blank">
+  <a href="#" target="_blank">
     <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
   </a>&nbsp;&nbsp;
-  <a  href="https://www.linkedin.com/in/danilo-lima-antunes/" target="_blank">
+  <a  href="#" target="_blank">
     <img align="left" src="https://img.shields.io/badge/LinkedIN-423f6d?style=for-the-badge&logo=linkedin&logoColor=753ed2" />
   </a>&nbsp;&nbsp;
 </p>
 
   
-- Eryck Carlos Santana Braga 
+- Ericky Carlos Santana Braga 
   
 <p align='center'>
   <a href="#" target="_blank">
@@ -97,18 +119,7 @@ A seguir, listamos os membros de nossa equipe, por favor, fique a vontade para v
 </p>
 
   
-- Filipe Carneiro de Almeida
-  
-<p align='center'>
-  <a href="#" target="_blank">
-    <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
-  </a>&nbsp;&nbsp;
-  <a href="#" target="_blank">
-    <img align="left" src="https://img.shields.io/badge/LinkedIN-423f6d?style=for-the-badge&logo=linkedin&logoColor=753ed2" />
-  </a>&nbsp;&nbsp;
-</p>
-
-- Pedro Quintino
+- Felipe Carneiro de Almeida
   
 <p align='center'>
   <a href="#" target="_blank">
@@ -127,6 +138,18 @@ A seguir, listamos os membros de nossa equipe, por favor, fique a vontade para v
     <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
   </a>&nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/jeanpesil/" target="_blank">
+    <img align="left" src="https://img.shields.io/badge/LinkedIN-423f6d?style=for-the-badge&logo=linkedin&logoColor=753ed2" />
+  </a>&nbsp;&nbsp;
+</p>
+
+   
+- Pedro Quintino
+  
+<p align='center'>
+  <a href="#" target="_blank">
+    <img align="left" src="https://img.shields.io/badge/Github-423f6d?style=for-the-badge&logo=github&logoColor=753ed2" />        
+  </a>&nbsp;&nbsp;
+  <a href="#" target="_blank">
     <img align="left" src="https://img.shields.io/badge/LinkedIN-423f6d?style=for-the-badge&logo=linkedin&logoColor=753ed2" />
   </a>&nbsp;&nbsp;
 </p>
