@@ -90,7 +90,7 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/decoration/smartphones",
+        "href": "/eletronicos/smartphone",
         "noFollow": true,
         "tagTitle": "Smartphones",
         "text": "Smartphones"
@@ -106,7 +106,7 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/decoration/videogames",
+        "href": "/videogames/d",
         "noFollow": true,
         "tagTitle": "Videogames",
         "text": "Videogames"
@@ -122,7 +122,7 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/decoration/tvs",
+        "href": "/tvs/d",
         "noFollow": true,
         "tagTitle": "TVs",
         "text": "TVs"
@@ -149,7 +149,7 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/bags/d",
+        "href": "/mouse-pad/d",
         "noFollow": true,
         "tagTitle": "Mouse Pad",
         "text": "Mouse Pad"
@@ -165,7 +165,7 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/bags/backpacks",
+        "href": "/monitor/d",
         "noFollow": true,
         "tagTitle": "Monitor",
         "text": "Monitor"
@@ -181,7 +181,7 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/bags/necessaire",
+        "href": "/caixa-de-som/d",
         "noFollow": true,
         "tagTitle": "Caixa de Som",
         "text": "Caixa de Som"
@@ -222,7 +222,7 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/clothing/d",
+        "href": "/bitsizedtech/eletronicos",
         "noFollow": true,
         "tagTitle": "Informática",
         "text": "Informática"
@@ -303,7 +303,7 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/clothing/d",
+        "href": "/headset/d",
         "noFollow": true,
         "tagTitle": "Headset Gamer",
         "text": "Headset Gamer"
@@ -319,7 +319,7 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/clothing/shorts",
+        "href": "/gabinete/d",
         "noFollow": false,
         "tagTitle": "Gabinete Gamer",
         "text": "Gabinete Gamer"
@@ -335,7 +335,7 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/clothing/tank-tops",
+        "href": "/bitsizedtech/eletronicos/notebooks",
         "noFollow": false,
         "tagTitle": "Notebook Gamer",
         "text": "Notebook Gamer"
@@ -351,7 +351,7 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/clothing/shirts",
+        "href": "/cadeira-gamer-asus-rog-chariot-aura-rgb-braco-4d-preto/p",
         "noFollow": false,
         "tagTitle": "Cadeira Gamer",
         "text": "Cadeira Gamer"
@@ -367,7 +367,7 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/clothing/sweatshirt",
+        "href": "/teclado/d",
         "noFollow": false,
         "tagTitle": "Teclado",
         "text": "Teclado"
@@ -383,7 +383,7 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/clothing/cropped",
+        "href": "/mouse-gamer-corsair/p",
         "noFollow": false,
         "tagTitle": "Mouse",
         "text": "Mouse"
